@@ -4,19 +4,19 @@ import { blue, white } from '../utils/colors';
 
 const BtDefault = (props) => (
   <TouchableOpacity 
-    style={styles.button}
+    style={styles.BtDefault}
     onPress={props.func}>
-    <Text style={styles.buttonText}>{props.text}</Text>
+    <Text style={styles.BtDefaultText}>{props.text}</Text>
   </TouchableOpacity>
 );
 
 const styles = StyleSheet.create({
-  button: {
+  BtDefault: {
     padding: 10,
     margin: 5,
     backgroundColor: blue,
   },
-  buttonText: {
+  BtDefaultText: {
     color: white,
     borderRadius: 1,
     textAlign: 'center'

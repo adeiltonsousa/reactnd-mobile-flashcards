@@ -3,7 +3,7 @@ import { View, Text, TextInput, StyleSheet } from 'react-native';
 import { addCardToDeck } from '../utils/api';
 import { red } from '../utils/colors';
 import { connect } from 'react-redux';
-import Button from './Button';
+import BtDefault from './BtDefault';
 
 class Card extends PureComponent {
   state = { 
@@ -39,8 +39,8 @@ class Card extends PureComponent {
           value={this.state.answer}
           onFocus={() => this.setState({ answer: '', answerTooShort: false })}
         />
-        <View style={styles.buttonWrapper}>
-          <Button text='Create Card' func={this.createCard}/>
+        <View style={styles.BtDefaultWrapper}>
+          <BtDefault text='Create Card' func={this.createCard}/>
         </View>
       </View>
     );

@@ -37,8 +37,8 @@ class Deck extends Component {
           value={this.state.title}
           onFocus={() => this.setState({ title: '', tooShort: false })}
         />
-        <View style={styles.buttonWrapper}>
-          <Button text='Create Deck' func={this.createDeck}/>
+        <View style={styles.BtDefaultWrapper}>
+          <BtDefault text='Create Deck' func={this.createDeck}/>
         </View>
       </View>
     );

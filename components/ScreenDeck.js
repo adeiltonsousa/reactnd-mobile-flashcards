@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FlatList, StyleSheet } from 'react-native';
-import DeckListItem from './DeckListItem';
+import ListDeck from './ListDeck';
 
 class ScreenDeck extends Component {
   componentDidMount() {
@@ -14,7 +14,7 @@ class ScreenDeck extends Component {
         data={Object.values(this.props.decks)}
         keyExtractor={this._keyExtractor}
         renderItem={({ item }) => (
-          <DeckListItem 
+          <ListDeck 
             deck={item} 
             navigateToDeck={this.navigateToDeck} 
           />
