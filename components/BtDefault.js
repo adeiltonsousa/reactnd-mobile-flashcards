@@ -11,6 +11,12 @@ const BtDefault = (props) => (
 );
 
 const styles = StyleSheet.create({
+  buttonText: {
+    color: white,
+    borderRadius: 2,
+    fontWeight: 'bold',
+    textAlign: 'center'
+  },
   button: {
     padding: 12,
     margin: 4,
@@ -21,12 +27,6 @@ const styles = StyleSheet.create({
     shadowRadius: 5,
     shadowOpacity: 1,
     elevation: 4
-  },
-  buttonText: {
-    color: white,
-    borderRadius: 2,
-    fontWeight: 'bold',
-    textAlign: 'center'
   }
 });
 

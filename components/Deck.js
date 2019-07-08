@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import { View, TextInput, Text, StyleSheet } from 'react-native';
+import { NavigationActions } from 'react-navigation';
 import { saveDeckTitle } from '../utils/api';
+import { red } from '../utils/colors';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { addNewDeck } from '../actions';
+import BtDefault from './BtDefault';
 
 class Deck extends Component {
   state = { 
@@ -28,7 +33,7 @@ class Deck extends Component {
 
   render() {
     return (
-      <View>
+      <View style={styles.container}>
         {this.state.tooShort && <Text style={styles.error}>The deck name is too short!</Text>}
         <TextInput
           underlineColorAndroid='#2962ff'
@@ -62,7 +67,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     fontSize: 17
   },
-  buttonWrapper: {
+  BtDefaultWrapper: {
     alignItems: "center"
   }
 });

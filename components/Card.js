@@ -6,7 +6,7 @@ import { red } from '../utils/colors';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { addNewCard } from '../actions';
-import Button from './Button';
+import BtDefault from './BtDefault';
 
 class Card extends PureComponent {
   state = { 
@@ -59,8 +59,8 @@ class Card extends PureComponent {
           value={this.state.answer}
           onFocus={() => this.setState({ answer: '', answerTooShort: false })}
         />
-        <View style={styles.buttonWrapper}>
-          <Button text='Create Card' func={this.createCard}/>
+        <View style={styles.BtDefaultWrapper}>
+          <BtDefault text='Create Card' func={this.createCard}/>
         </View>
       </View>
     );
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     fontSize: 17
   },
-  buttonWrapper: {
+  BtDefaultWrapper: {
     alignItems: "center"
   }
 });
