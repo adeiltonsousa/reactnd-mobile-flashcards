@@ -45,5 +45,30 @@ class Deck extends Component {
   }
 }
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 20,
+    justifyContent: 'flex-start',
+  },
+  error: {
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: red
+  },
+  titleInput: {
+    padding: 10,
+    marginTop: 35,
+    marginBottom: 10,
+    fontSize: 17
+  },
+  buttonWrapper: {
+    alignItems: "center"
+  }
+});
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ addNewDeck }, dispatch);
+}
 
 export default connect(null, mapDispatchToProps)(Deck);
