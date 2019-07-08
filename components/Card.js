@@ -5,7 +5,7 @@ import { red } from '../utils/colors';
 import { connect } from 'react-redux';
 import Button from './Button';
 
-class AddCardScreen extends PureComponent {
+class Card extends PureComponent {
   state = { 
     question: 'Question',
     answer: 'Answer',
@@ -47,4 +47,4 @@ class AddCardScreen extends PureComponent {
   }
 }
 
-export default connect(null, mapDispatchToProps)(AddCardScreen);
+export default connect(null, mapDispatchToProps)(Card);
