@@ -1,19 +1,30 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, StatusBar } from 'react-native';
+import { createStore, applyMiddleware } from 'redux';
+import { blueDark } from './utils/colors';
 
-export default function App() {
+function AppStatusBar ({backgroundColor, ...props}) {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <View style={{ backgroundColor, height: Constants.statusBarHeight }}>
+      <StatusBar translucent backgroundColor={backgroundColor} {...props} />
     </View>
-  );
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const store = createStore(reducer, {}, applyMiddleware(ReduxThunk));
+
+export default class App extends React.Component {
+  componentDidMount() {
+   
+  }
+
+  render() {
+    return (
+      <Provider store={store}>
+        <View style={{flex: 1}}>
+          <AppStatusBar backgroundColor={blueDark}/>
+        </View>
+      </Provider>
+    );
+  }
+}

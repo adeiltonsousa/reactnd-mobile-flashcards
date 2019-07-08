@@ -1,7 +1,7 @@
-export const blue = '#2962ff';
-export const blueDark = '#0039cb';
-export const blueLight = '#768fff';
-export const blueHighlight = '#66d9ff';
-export const gray = '#dedede';
-export const red = '#b30000';
-export const white = '#edf2f4';
+export const blue = '#4169E1';
+export const blueDark = '#00008B';
+export const blueLight = '#ADD8E6';
+export const blueHighlight = '#87CEFA';
+export const gray = '#DCDCDC';
+export const red = '#B22222';
+export const white = '#FFFFFF';
