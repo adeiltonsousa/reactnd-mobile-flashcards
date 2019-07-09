@@ -79,10 +79,10 @@ const styles = StyleSheet.create({
     color: red
   },
   input: {
-    padding: 10,
-    marginTop: 15,
-    marginBottom: 10,
-    fontSize: 17
+    padding: 15,
+    marginTop: 20,
+    marginBottom: 8,
+    fontSize: 16
   },
   BtDefaultWrapper: {
     alignItems: "center"

@@ -53,19 +53,18 @@ class Deck extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
+    padding: 15,
     justifyContent: 'flex-start',
   },
   error: {
-    fontWeight: 'bold',
     textAlign: 'center',
     color: red
   },
   titleInput: {
-    padding: 10,
-    marginTop: 35,
-    marginBottom: 10,
-    fontSize: 17
+    padding: 15,
+    marginTop: 40,
+    marginBottom: 5,
+    fontSize: 16
   },
   BtDefaultWrapper: {
     alignItems: "center"

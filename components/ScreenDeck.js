@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { FlatList, StyleSheet } from 'react-native';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { getAllDecks } from '../actions';
 import ListDeck from './ListDeck';
 
 class ScreenDeck extends Component {
@@ -7,7 +10,13 @@ class ScreenDeck extends Component {
     this.props.getAllDecks();
   }
 
- render() {
+  _keyExtractor = (item, index) => index;
+
+  navigateToDeck = (deck) => {
+    this.props.navigation.navigate('IndividualDeck', { deck });
+  }
+
+  render() {
     return (
       <FlatList 
         style={styles.deckList}
@@ -24,4 +33,21 @@ class ScreenDeck extends Component {
   }
 }
 
-export default ScreenDeck; 
+const styles = StyleSheet.create({
+  deckList: {
+    flex: 1,
+    alignSelf: 'stretch',
+    marginTop: 10,
+    padding: 15
+  }
+});
+
+function mapStateToProps(state) {
+  return { decks: state };
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ getAllDecks }, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ScreenDeck); 
